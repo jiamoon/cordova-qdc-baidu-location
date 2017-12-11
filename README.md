@@ -1,7 +1,21 @@
 2017-12-11因为项目需要,又对插件进行了修改，修正了android6+权限带来的问题以及添加package.json文件解决cordova高版本导致无法安装的问题
+
+
+
+安装方式如下  
+
 D:\liangzhenghui\testcordova>cordova plugin add https://github.com/liangzhenghui/cordova-qdc-baidu-location --variable API_KEY="你的百度key"
+
+
+
 比如我的key 是ByQozv2BPSjoERC0RO7QS6qYp3pGNMGT 你可以拿来试下。
+
+
+
 如果安装出现git相关问题就配置git环境再安装。
+
+
+
 
 调用方式
 baidu_location.getCurrentPosition(function(data){
@@ -23,8 +37,5 @@ baidu_location.getCurrentPosition(function(data){
                 addr : null
                 operationers : 0
                 describe : 网络定位成功
-  失败返回
-                字符串
-                如下描述
-                
+失败返回字符串如下
                 "定位权限没开启,功能没法使用"
