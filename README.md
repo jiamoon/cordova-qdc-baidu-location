@@ -15,6 +15,12 @@ D:\liangzhenghui\testcordova>cordova plugin add https://github.com/liangzhenghui
 如果安装出现git相关问题就配置git环境再安装。
 
 
+或者直接将项目下载到本地之后解压然后安装 
+cordova plugin add D:\cordovademo\cordova-qdc-baidu-location-master --variable API_KEY="你的百度key"
+
+
+D:\cordovademo\cordova-qdc-baidu-location-master是我插件所在在的根目录
+
 
 
 调用方式
@@ -39,3 +45,7 @@ baidu_location.getCurrentPosition(function(data){
                 describe : 网络定位成功
 失败返回字符串如下
                 "定位权限没开启,功能没法使用"
+                
+                
+                
+                
