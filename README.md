@@ -48,4 +48,11 @@ baidu_location.getCurrentPosition(function(data){
                 
                 
                 
+                
+                
+                
+                
+                打赏可以点击我头像支付
+           
+                
                 
