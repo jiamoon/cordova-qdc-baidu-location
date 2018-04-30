@@ -50,7 +50,12 @@ baidu_location.getCurrentPosition(function(data){
 1.0.0版本适合在gradle3以下使用
 近期发现gradle3以后,项目的路径调整了,所以升级到2.0.0版本才解决了由于androidstudio升级后带来的问题。
 ionic3适用2.0.0版本
-部分人反映在ionic3下安装会出错,找到2种解决方式：
+部分人反映在ionic3下安装会出错,
+错误如下所示
+```
+it does not contain a package.json file
+```
+找到2种解决方式：
 方式1：npm降下来到4或者3，
 方式2：删掉ionic3中package-lock.json文件, 删掉node_modules目录
 # 打赏可以点击我头像支付
