@@ -24,16 +24,18 @@ D:\cordovademo\cordova-qdc-baidu-location-master是我插件所在在的根目�
 
 
 调用方式
+···
 baidu_location.getCurrentPosition(function(data){
-                      console.log("success");
-                         alert(JSON.stringify(data));
-                        console.log(JSON.stringify(data));
+                console.log("success");
+                alert(JSON.stringify(data));
+               console.log(JSON.stringify(data));
   }, function(data){
       console.log("fail");
       console.log(data);
-       alert(JSON.stringify(data));
+      alert(JSON.stringify(data));
   });
-  
+
+···  
   成功返回json对象如下
                 time : 2017-12-11 17:15:55
                 error code : 161
