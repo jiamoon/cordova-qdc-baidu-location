@@ -48,6 +48,7 @@ baidu_location.getCurrentPosition(function(data){
                 "定位权限没开启,功能没法使用"
 # 版本
 1.0.0版本适合在gradle3以下使用
+2.0.0版本适合在gradle3以上使用
 近期发现gradle3以后,项目的路径调整了,所以升级到2.0.0版本才解决了由于androidstudio升级后带来的问题。
 ionic3适用2.0.0版本
 部分人反映在ionic3下安装会出错,
