@@ -24,7 +24,7 @@ D:\cordovademo\cordova-qdc-baidu-location-master是我插件所在在的根目�
 
 
 调用方式
-···
+```javascript
 baidu_location.getCurrentPosition(function(data){
                 console.log("success");
                 alert(JSON.stringify(data));
@@ -34,8 +34,7 @@ baidu_location.getCurrentPosition(function(data){
       console.log(data);
       alert(JSON.stringify(data));
   });
-
-···  
+  ```
   成功返回json对象如下
                 time : 2017-12-11 17:15:55
                 error code : 161
@@ -46,14 +45,7 @@ baidu_location.getCurrentPosition(function(data){
                 operationers : 0
                 describe : 网络定位成功
 失败返回字符串如下
-                "定位权限没开启,功能没法使用"
-                
-                
-                
-                
-                
-                
-                
+                "定位权限没开启,功能没法使用"        
                 打赏可以点击我头像支付
            
                 
