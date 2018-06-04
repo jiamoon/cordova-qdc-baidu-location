@@ -61,6 +61,12 @@ it does not contain a package.json file
 方式1：npm降下来到4或者3，
 方式2：删掉ionic3中package-lock.json文件, 删掉node_modules目录
 # 打赏可以点击我头像支付
+
+
            
                 
-                
+   # 常见问题
+   ## baidu_location是全局变量，所以不用引入直接就可以使用baidu_location.getCurrentPosition
+   ## 请保证在deviceready的回调函数中执行baidu_location.getCurrentPosition方法
+   ## 请不要在浏览器上测试，建议用真机测试
+   
