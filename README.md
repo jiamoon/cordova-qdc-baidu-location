@@ -59,7 +59,6 @@ it does not contain a package.json file
 找到2种解决方式：
 方式1：npm降下来到4或者3，
 方式2：删掉ionic3中package-lock.json文件, 删掉node_modules目录
-# 打赏可以点击我头像支付
-           
+# 体验一下安装ionic1百度定位.apk在手机上测试 
                 
                 
