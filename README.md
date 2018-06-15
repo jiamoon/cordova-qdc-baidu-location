@@ -1,10 +1,17 @@
-2017-12-11因为项目需要,又对插件进行了修改，修正了android6+权限带来的问题以及添加package.json文件解决cordova高版本导致无法安装的问题
-
-
 
 # 安装方式如下  
 
-D:\liangzhenghui\testcordova>cordova plugin add https://github.com/liangzhenghui/cordova-qdc-baidu-location --variable API_KEY="你的百度key"
+D:\liangzhenghui\testcordova>cordova plugin add https://github.com/liangzhenghui/cordova-qdc-baidu-location#项目分支 --variable API_KEY="你的百度key"
+
+比如2.0.0版本
+D:\testgitclone\demo>cordova plugin add  https://github.com/liangzhenghui/cordova-qdc-baidu-location#2.0.0 --variable API_KEY='ByQozv2BPSjoERC0RO7QS6qYp3pGNMGT'
+
+
+1.0.0版本
+对应
+D:\testgitclone\demo>cordova plugin add  https://github.com/liangzhenghui/cordova-qdc-baidu-location#1.0.0 --variable API_KEY='ByQozv2BPSjoERC0RO7QS6qYp3pGNMGT'
+
+地址后面不加分支 就默认是最新的也就是2.0.0版本的。
 
 
 
@@ -15,10 +22,12 @@ D:\liangzhenghui\testcordova>cordova plugin add https://github.com/liangzhenghui
 如果安装出现git相关问题就配置git环境再安装。
 
 
-或者直接将项目下载到本地之后解压然后安装 
+或者直接选择branch(分支)之后点击绿色按钮Clone or download 选择下载zip包，将插件项目下载到本地之后解压然后安装 
+cordova plugin add 插件目录 --variable API_KEY="你的百度key"
+
+
+比如这里我的就是
 cordova plugin add D:\cordovademo\cordova-qdc-baidu-location-master --variable API_KEY="你的百度key"
-
-
 D:\cordovademo\cordova-qdc-baidu-location-master是我插件所在在的根目录
 
 # 调用方式
@@ -47,11 +56,15 @@ baidu_location.getCurrentPosition(function(data){
 失败返回字符串如下
                 "定位权限没开启,功能没法使用"
 # 版本
-## 1.0.0版本适合在gradle3.x以下(不包含gradle3.x版本)使用
-## 2.0.0版本适合在gradle3.x以及gradle3.x以上使用
+##1.0.0版本适合在gradle3以下使用（通过查看build.gradle可以看到例如 
+dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0'
+ }）那这就是gradle3以上
+ 
+ 
+##2.0.0版本适合在gradle3以上使用
 近期发现gradle3以后,项目的路径调整了,所以升级到2.0.0版本才解决了由于androidstudio升级后带来的问题。
-## ionic3适用2.0.0版本
-## ionic1适用1.0.0版本
+ionic3适用2.0.0版本
 部分人反映在ionic3下安装会出错,
 错误如下所示
 ```
@@ -60,12 +73,6 @@ it does not contain a package.json file
 找到2种解决方式：
 方式1：npm降下来到4或者3，
 方式2：删掉ionic3中package-lock.json文件, 删掉node_modules目录
-
-
-           
+# 项目中上传了百度定位.apk文件，可以体验一下安装ionic1，gradle3以下的百度定位.apk在手机上测试 
                 
-   # 常见问题
-   ## baidu_location是全局变量，所以不用引入直接就可以使用baidu_location.getCurrentPosition
-   ## 请保证在deviceready的回调函数中执行baidu_location.getCurrentPosition方法
-   ## 请不要在浏览器上测试，建议用真机测试
-   
+                
